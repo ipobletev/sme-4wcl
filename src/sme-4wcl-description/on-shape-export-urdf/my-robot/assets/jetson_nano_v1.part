@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "17dd0bfb7268aff2770d6a72",
+    "documentMicroversion": "1ebd22a638717d14c9af5d79",
+    "elementId": "7a5739c4d0538fc7bf5b9a9e",
+    "fullConfiguration": "default",
+    "id": "MBUlyD4hkMmwiQ5/c",
+    "isStandardContent": false,
+    "name": "jetson-nano v1 <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

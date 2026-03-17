@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "48f8963cce08af86bf2ef1eb",
+    "documentMicroversion": "b0989b04821cd5252ee805ce",
+    "documentVersion": "2a89d6e7ad7b58f0c5f08360",
+    "elementId": "9a9f84c55cdad4a6a632d53e",
+    "fullConfiguration": "default",
+    "id": "MSaae7DomaSeSLExy",
+    "isStandardContent": false,
+    "name": "HexagonalMotorAdapter v1 <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}
