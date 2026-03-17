@@ -51,3 +51,10 @@ source ~/.bashrc
 sudo apt install python3-pip -y
 sudo apt install -y python3-colcon-common-extensions
 sudo apt install -y ros-humble-joint-state-publisher-gui
+sudo apt install -y ros-humble-gazebo-ros-pkgs 
+sudo apt install -y ros-humble-gazebo-plugins 
+sudo apt install -y ros-humble-ros-gz
+sudo apt install -y ros-humble-xacro
+sudo apt install -y ros-humble-teleop-twist-keyboard
+sudo apt install -y ros-humble-rviz2
+sudo apt install -y ros-humble-robot-state-publisher

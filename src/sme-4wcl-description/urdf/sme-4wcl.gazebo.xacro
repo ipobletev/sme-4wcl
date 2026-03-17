@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="sme-4wcl">
+
+  <!-- Include the generated URDF -->
+  <xacro:include filename="$(find sme-4wcl-description)/urdf/robot.urdf" />
+
+  <!-- Gazebo physics properties for the wheels -->
+  <gazebo reference="wheel_1">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+  </gazebo>
+
+  <gazebo reference="wheel_2">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+  </gazebo>
+
+  <gazebo reference="wheel_3">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+  </gazebo>
+
+  <gazebo reference="wheel_4">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+  </gazebo>
+
+  <!-- Ignition Gazebo Plugins -->
+  <gazebo>
+    <!-- Diff Drive Plugin -->
+    <plugin
+      filename="ignition-gazebo-diff-drive-system"
+      name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>base_link_to_wheel_1</left_joint>
+      <left_joint>base_link_to_wheel_3</left_joint>
+      <right_joint>base_link_to_wheel_2</right_joint>
+      <right_joint>base_link_to_wheel_4</right_joint>
+      <wheel_separation>0.212</wheel_separation>
+      <wheel_radius>0.0325</wheel_radius>
+      <odom_publish_frequency>10</odom_publish_frequency>
+      <topic>/cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+      <tf_topic>/tf</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+    </plugin>
+
+    <!-- Joint State Publisher Plugin -->
+    <plugin
+      filename="ignition-gazebo-joint-state-publisher-system"
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+      <joint_name>base_link_to_wheel_1</joint_name>
+      <joint_name>base_link_to_wheel_2</joint_name>
+      <joint_name>base_link_to_wheel_3</joint_name>
+      <joint_name>base_link_to_wheel_4</joint_name>
+    </plugin>
+  </gazebo>
+
+</robot>

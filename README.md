@@ -27,21 +27,39 @@ source install/setup.bash
 ```
 ## Packages
 
-### sme-4wcl-description - Robot Visualization
+### sme-4wcl-description - Robot Visualization & Gazebo
 ---
-To visualize the robot in **RViz2** and interactively move its joints, run the following command:
+This package contains the robot's URDF description and launch files for visualization and simulation.
 
+#### RViz Visualization
+To visualize the robot in **RViz2** and interactively move its joints:
 ```bash
 ros2 launch sme-4wcl-description display.launch.py
 ```
+
+#### Gazebo Simulation
+To launch the robot in **Gazebo** for physics simulation:
+```bash
+ros2 launch sme-4wcl-description gazebo.launch.py
+```
+To control the robot in Gazebo, use the `teleop_twist_keyboard`:
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+#### Features
+- **Robot Model**: 3D visualization based on the URDF exported from Onshape.
+- **Gazebo Support**: Physics-based simulation with a 4-wheel differential drive plugin (`libgazebo_ros_diff_drive`).
+- **Joint State Publisher GUI**: Interactive sliders to control joints in RViz.
+
+### assets - Robot Meshes
+---
+This package provides the robot's 3D mesh files (STL) to the ROS 2 environment. It ensures that the mesh paths referenced in the URDF (`package://assets/...`) are correctly resolved by tools like RViz and Gazebo.
+
+---
 
 To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
 ./src/sme-4wcl-description/on-shape-export-urdf/launch_app.sh
 ```
-
-#### Features
-- **Robot Model**: 3D visualization based on the URDF exported from Onshape.
-- **Joint State Publisher GUI**: Interactive sliders to control wheels and other joints.
-- **TF Display**: Visualization of the robot's coordinate frames.
