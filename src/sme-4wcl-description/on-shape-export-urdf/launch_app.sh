@@ -61,10 +61,10 @@ echo -e "${BLUE}Environment installed successfully.${NC}"
 
 echo "Launch onshape-to-robot..."
 
-if [ -d "my-robot" ]; then
-    onshape-to-robot my-robot
+if [ -d "sme-4wcl" ]; then
+    onshape-to-robot sme-4wcl
 else
-    echo -e "${YELLOW}Please create 'my-robot' directory and add your robot configuration files to it.${NC}"
+    echo -e "${YELLOW}Please create 'sme-4wcl' directory and add your robot configuration files to it.${NC}"
 fi
 
 echo -e "${GREEN}Process completed successfully.${NC}"

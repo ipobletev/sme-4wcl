@@ -10,8 +10,8 @@ def generate_launch_description():
     pkg_description = get_package_share_directory('sme-4wcl-description')
 
     # Path to the URDF file
-    # Note: We expect the file to be installed in share/sme-4wcl-description/on-shape-export-urdf/my-robot/robot.urdf
-    urdf_file = os.path.join(pkg_description, 'on-shape-export-urdf', 'my-robot', 'robot.urdf')
+    # Note: We expect the file to be installed in share/sme-4wcl-description/on-shape-export-urdf/sme-4wcl/robot.urdf
+    urdf_file = os.path.join(pkg_description, 'on-shape-export-urdf', 'sme-4wcl', 'robot.urdf')
 
     # Read the URDF file
     with open(urdf_file, 'r') as infp:

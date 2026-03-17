@@ -4,7 +4,7 @@ This repository contains the URDF description and visualization tools for the **
 
 ## Prerequisites
 
-Before starting, ensure you have **ROS 2 Humble** installed. You can follow the [Official ROS 2 Humble Installation Guide](https://docs.ros.org/en/humble/Installation.html) or use the provided script:
+Before starting, ensure you have **ROS 2 Humble** installed and **Ubuntu 22.04**. You can follow the [Official ROS 2 Humble Installation Guide](https://docs.ros.org/en/humble/Installation.html) or use the provided script:
 
 ```bash
 # Optional: Use the included installation script

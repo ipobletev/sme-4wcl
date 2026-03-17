@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/17dd0bfb7268aff2770d6a72/w/a1b7f6d82147a790c6751a93/e/7e9b766432fb5da199998094 -->
-<robot name="my-robot">
+<robot name="sme-4wcl">
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
