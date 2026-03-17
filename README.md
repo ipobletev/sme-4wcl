@@ -35,10 +35,9 @@ To visualize the robot in **RViz2** and interactively move its joints, run the f
 ros2 launch sme-4wcl-description display.launch.py
 ```
 
-To update the robot model when it is modified in the cloud (Onshape), ensuring you have `onshape-to-robot` installed:
+To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
-# Update from Onshape (one-liner)
 ./src/sme-4wcl-description/on-shape-export-urdf/launch_app.sh
 ```
 
