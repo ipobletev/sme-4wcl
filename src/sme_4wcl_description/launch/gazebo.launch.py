@@ -11,7 +11,7 @@ from launch.conditions import IfCondition
 
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('sme-4wcl-description')
+    pkg_share = get_package_share_directory('sme_4wcl_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     
     # Process the URDF file
@@ -100,14 +100,14 @@ def generate_launch_description():
         SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'),
         
         SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', [
-            pkg_share,
+            os.path.dirname(pkg_share),
             ':',
-            get_package_share_directory('assets')
+            pkg_share
         ]),
         SetEnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', [
-            pkg_share,
+            os.path.dirname(pkg_share),
             ':',
-            get_package_share_directory('assets')
+            pkg_share
         ]),
         render_engine,
         gazebo,

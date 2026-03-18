@@ -67,8 +67,8 @@ if [ -d "sme-4wcl" ]; then
     mkdir -p ../urdf
     mkdir -p ../meshes
     cp sme-4wcl/robot.urdf ../urdf/
-    # Replace package://assets/ with package://sme-4wcl-description/meshes/ in the URDF
-    sed -i 's|package://assets/|package://sme-4wcl-description/meshes/|g' ../urdf/robot.urdf
+    # Replace package://assets/ with package://sme_4wcl_description/meshes/ in the URDF
+    sed -i 's|package://assets/|package://sme_4wcl_description/meshes/|g' ../urdf/robot.urdf
     cp sme-4wcl/assets/*.stl ../meshes/
     echo -e "${GREEN}Sync completed.${NC}"
 else

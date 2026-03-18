@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="sme-4wcl">
 
   <!-- Include the generated URDF -->
-  <xacro:include filename="$(find sme-4wcl-description)/urdf/robot.urdf" />
+  <xacro:include filename="$(find sme_4wcl_description)/urdf/robot.urdf" />
 
   <!-- Gazebo physics properties for the wheels -->
   <gazebo reference="wheel_1">

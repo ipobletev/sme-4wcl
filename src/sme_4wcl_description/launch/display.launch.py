@@ -7,10 +7,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # Get the package directory
-    pkg_description = get_package_share_directory('sme-4wcl-description')
+    pkg_description = get_package_share_directory('sme_4wcl_description')
 
     # Path to the URDF file
-    # Note: We expect the file to be installed in share/sme-4wcl-description/urdf/robot.urdf
+    # Note: We expect the file to be installed in share/sme_4wcl_description/urdf/robot.urdf
     urdf_file = os.path.join(pkg_description, 'urdf', 'robot.urdf')
 
     # Read the URDF file

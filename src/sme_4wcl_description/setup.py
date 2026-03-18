@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'sme-4wcl-description'
+package_name = 'sme_4wcl_description'
 
 setup(
     name=package_name,

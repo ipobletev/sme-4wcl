@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('sme-4wcl-description')
+    pkg_share = get_package_share_directory('sme_4wcl_description')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
     
     # Process the URDF file (Gazebo Classic version)
@@ -72,9 +72,7 @@ def generate_launch_description():
         SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'),
         
         SetEnvironmentVariable('GAZEBO_MODEL_PATH', [
-            os.path.dirname(pkg_share), # For sme-4wcl-description
-            ':',
-            os.path.dirname(get_package_share_directory('assets')), # For assets package
+            os.path.dirname(pkg_share), # For sme_4wcl_description
         ]),
         
         gazebo,

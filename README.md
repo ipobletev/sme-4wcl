@@ -27,7 +27,7 @@ source install/setup.bash
 ```
 ## Packages
 
-### sme-4wcl-description - Robot Visualization & Gazebo
+### sme_4wcl_description - Robot Visualization & Gazebo
 ---
 This package contains the robot's URDF description and launch files for visualization and simulation.
 
@@ -35,7 +35,7 @@ This package contains the robot's URDF description and launch files for visualiz
 To visualize the robot in **RViz2** and interactively move its joints:
 ```bash
 # Launch the robot in RViz2
-ros2 launch sme-4wcl-description display.launch.py
+ros2 launch sme_4wcl_description display.launch.py
 
 # Publish the wheel joint states
 ros2 run joint_state_publisher_gui joint_state_publisher_gui 
@@ -47,13 +47,13 @@ To launch the robot in **Gazebo** for physics simulation:
 **Gazebo Sim (Ignition - Recommended)**
 ```bash
 # Launch the robot in Gazebo Ignition
-ros2 launch sme-4wcl-description gazebo.launch.py
+ros2 launch sme_4wcl_description gazebo.launch.py
 ```
 
 **Gazebo Classic**
 ```bash
 # Launch the robot in Gazebo Classic
-ros2 launch sme-4wcl-description gazebo_classic.launch.py
+ros2 launch sme_4wcl_description gazebo_classic.launch.py
 ```
 
 ```bash
@@ -66,19 +66,19 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 - **Gazebo Support**: Physics-based simulation with a 4-wheel differential drive plugin (`libgazebo_ros_diff_drive`).
 - **Joint State Publisher GUI**: Interactive sliders to control joints in RViz.
 
-### sme-4wcl-navigation - Robot Navigation (Nav2)
+### sme_4wcl_navigation - Robot Navigation (Nav2)
 ---
 This package provides navigation capabilities using the **Nav2** stack.
 
 #### Launch Navigation
 1. First, ensure you have the robot simulation running (Gazebo):
 ```bash
-ros2 launch sme-4wcl-description gazebo.launch.py
+ros2 launch sme_4wcl_description gazebo.launch.py
 ```
 
 2. Then, launch the navigation stack:
 ```bash
-ros2 launch sme-4wcl-navigation navigation.launch.py
+ros2 launch sme_4wcl_navigation navigation.launch.py
 ```
 
 #### Arguments
@@ -88,7 +88,7 @@ ros2 launch sme-4wcl-navigation navigation.launch.py
 
 Example with a custom map:
 ```bash
-ros2 launch sme-4wcl-navigation navigation.launch.py map:=/path/to/your/map.yaml
+ros2 launch sme_4wcl_navigation navigation.launch.py map:=/path/to/your/map.yaml
 ```
 
 ## Assets - Robot Meshes
@@ -96,5 +96,5 @@ To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
 # Launch the Onshape API to export the URDF and update meshes (./assets) and urdf (./urdf)
-./src/sme-4wcl-description/on-shape-export-urdf/launch_app.sh
+./src/sme_4wcl_description/on-shape-export-urdf/launch_app.sh
 ```
