@@ -56,15 +56,10 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 - **Gazebo Support**: Physics-based simulation with a 4-wheel differential drive plugin (`libgazebo_ros_diff_drive`).
 - **Joint State Publisher GUI**: Interactive sliders to control joints in RViz.
 
-### assets - Robot Meshes
----
-This package provides the robot's 3D mesh files (STL) to the ROS 2 environment. It ensures that the mesh paths referenced in the URDF (`package://assets/...`) are correctly resolved by tools like RViz and Gazebo.
-
----
-
+## Assets - Robot Meshes
 To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
-# Launch the Onshape app to export the URDF and update meshes (./assets) and urdf (./urdf)
+# Launch the Onshape API to export the URDF and update meshes (./assets) and urdf (./urdf)
 ./src/sme-4wcl-description/on-shape-export-urdf/launch_app.sh
 ```
