@@ -12,13 +12,6 @@ chmod +x install_ros2_humble.sh
 ./install_ros2_humble.sh
 ```
 
-### Additional Dependencies
-For navigation, you need the **Navigation 2 (Nav2)** stack:
-```bash
-sudo apt update
-sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup
-```
-
 ## Building
 
 1. From the root of your workspace, build the package:

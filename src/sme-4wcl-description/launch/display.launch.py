@@ -18,7 +18,7 @@ def generate_launch_description():
         robot_description_config = infp.read()
 
     # Path to the RViz config file
-    rviz_config_file = os.path.join(pkg_description, 'config', 'robot_display.rviz')
+    rviz_config_file = os.path.join(pkg_description, 'rviz', 'robot_display.rviz')
 
     # Parameters
     params = {'robot_description': robot_description_config}
