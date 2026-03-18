@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "17dd0bfb7268aff2770d6a72",
-    "documentMicroversion": "475e871bf4222691c29de0e5",
-    "elementId": "7a5739c4d0538fc7bf5b9a9e",
+    "documentMicroversion": "64546f04eeac45c8c979790d",
+    "elementId": "eac7feb9fcd162afce88a1d4",
     "fullConfiguration": "default",
-    "id": "MBUlyD4hkMmwiQ5/c",
+    "id": "MrRnzxxSdmg67lJRR",
     "isStandardContent": false,
-    "name": "jetson-nano v1 <1>",
-    "partId": "JFD",
+    "name": "dummy_footprint <1>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

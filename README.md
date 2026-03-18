@@ -34,16 +34,20 @@ This package contains the robot's URDF description and launch files for visualiz
 #### RViz Visualization
 To visualize the robot in **RViz2** and interactively move its joints:
 ```bash
+# Launch the robot in RViz2
 ros2 launch sme-4wcl-description display.launch.py
+
+# Publish the wheel joint states
+ros2 run joint_state_publisher_gui joint_state_publisher_gui 
 ```
 
 #### Gazebo Simulation
 To launch the robot in **Gazebo** for physics simulation:
 ```bash
+# Launch the robot in Gazebo
 ros2 launch sme-4wcl-description gazebo.launch.py
-```
-To control the robot in Gazebo, use the `teleop_twist_keyboard`:
-```bash
+
+# Control the robot using the keyboard
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
@@ -61,5 +65,6 @@ This package provides the robot's 3D mesh files (STL) to the ROS 2 environment. 
 To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
+# Launch the Onshape app to export the URDF and update meshes (./assets) and urdf (./urdf)
 ./src/sme-4wcl-description/on-shape-export-urdf/launch_app.sh
 ```

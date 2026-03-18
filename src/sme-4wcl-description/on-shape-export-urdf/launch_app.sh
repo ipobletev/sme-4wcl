@@ -63,6 +63,12 @@ echo "Launch onshape-to-robot..."
 
 if [ -d "sme-4wcl" ]; then
     onshape-to-robot sme-4wcl
+    echo -e "${BLUE}Syncing generated files to package directories...${NC}"
+    mkdir -p ../urdf
+    mkdir -p ../assets
+    cp sme-4wcl/robot.urdf ../urdf/
+    cp sme-4wcl/assets/*.stl ../assets/
+    echo -e "${GREEN}Sync completed.${NC}"
 else
     echo -e "${YELLOW}Please create 'sme-4wcl' directory and add your robot configuration files to it.${NC}"
 fi

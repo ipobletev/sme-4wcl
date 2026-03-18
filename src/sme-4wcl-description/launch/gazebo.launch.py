@@ -75,7 +75,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    pkg_share_path = os.path.join(pkg_share, '..')
+    pkg_share_path = pkg_share
 
     return LaunchDescription([
         SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1'),
