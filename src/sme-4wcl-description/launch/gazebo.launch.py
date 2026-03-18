@@ -7,6 +7,7 @@ from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch.actions import SetEnvironmentVariable
+from launch.conditions import IfCondition
 
 
 def generate_launch_description():
@@ -22,6 +23,13 @@ def generate_launch_description():
         'render_engine',
         default_value='ogre',
         description='Render engine for Gazebo (ogre or ogre2)'
+    )
+
+    use_software_rendering = LaunchConfiguration('use_software_rendering')
+    declare_use_software_rendering = DeclareLaunchArgument(
+        'use_software_rendering',
+        default_value='false',
+        description='Whether to force software rendering (LIBGL_ALWAYS_SOFTWARE=1)'
     )
 
     # Gazebo Sim (Ignition) launch
@@ -78,13 +86,29 @@ def generate_launch_description():
     pkg_share_path = pkg_share
 
     return LaunchDescription([
-        SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1'),
-        SetEnvironmentVariable('MESA_GL_VERSION_OVERRIDE', '3.3'),
+        declare_use_software_rendering,
+        
+        # Software rendering toggle
+        SetEnvironmentVariable(
+            'LIBGL_ALWAYS_SOFTWARE', '1',
+            condition=IfCondition(use_software_rendering)
+        ),
+        # MESA_GL_VERSION_OVERRIDE removed as it might cause hanging
+        
         SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre'),
         SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre'),
         SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'),
-        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', pkg_share_path),
-        SetEnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', pkg_share_path),
+        
+        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', [
+            pkg_share,
+            ':',
+            get_package_share_directory('assets')
+        ]),
+        SetEnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', [
+            pkg_share,
+            ':',
+            get_package_share_directory('assets')
+        ]),
         render_engine,
         gazebo,
         robot_state_publisher,
