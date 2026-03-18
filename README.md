@@ -43,10 +43,20 @@ ros2 run joint_state_publisher_gui joint_state_publisher_gui
 
 #### Gazebo Simulation
 To launch the robot in **Gazebo** for physics simulation:
-```bash
-# Launch the robot in Gazebo
-ros2 launch sme-4wcl-description gazebo.launch.py
 
+**Gazebo Sim (Ignition - Recommended)**
+```bash
+# Launch the robot in Gazebo Ignition
+ros2 launch sme-4wcl-description gazebo.launch.py
+```
+
+**Gazebo Classic**
+```bash
+# Launch the robot in Gazebo Classic
+ros2 launch sme-4wcl-description gazebo_classic.launch.py
+```
+
+```bash
 # Control the robot using the keyboard
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
