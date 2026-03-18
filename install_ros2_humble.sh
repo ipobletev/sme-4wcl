@@ -58,3 +58,5 @@ sudo apt install -y ros-humble-xacro
 sudo apt install -y ros-humble-teleop-twist-keyboard
 sudo apt install -y ros-humble-rviz2
 sudo apt install -y ros-humble-robot-state-publisher
+sudo apt install -y ros-humble-navigation2 
+sudo apt install -y ros-humble-nav2-bringup

@@ -12,6 +12,13 @@ chmod +x install_ros2_humble.sh
 ./install_ros2_humble.sh
 ```
 
+### Additional Dependencies
+For navigation, you need the **Navigation 2 (Nav2)** stack:
+```bash
+sudo apt update
+sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup
+```
+
 ## Building
 
 1. From the root of your workspace, build the package:
@@ -65,6 +72,31 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 - **Robot Model**: 3D visualization based on the URDF exported from Onshape.
 - **Gazebo Support**: Physics-based simulation with a 4-wheel differential drive plugin (`libgazebo_ros_diff_drive`).
 - **Joint State Publisher GUI**: Interactive sliders to control joints in RViz.
+
+### sme-4wcl-navigation - Robot Navigation (Nav2)
+---
+This package provides navigation capabilities using the **Nav2** stack.
+
+#### Launch Navigation
+1. First, ensure you have the robot simulation running (Gazebo):
+```bash
+ros2 launch sme-4wcl-description gazebo.launch.py
+```
+
+2. Then, launch the navigation stack:
+```bash
+ros2 launch sme-4wcl-navigation navigation.launch.py
+```
+
+#### Arguments
+- `map`: (Optional) Path to the map YAML file. Default is `map/map.yaml` within the package.
+- `use_sim_time`: (Optional) Use simulation time. Default is `true`.
+- `use_rviz`: (Optional) Launch RViz for visualization. Default is `true`.
+
+Example with a custom map:
+```bash
+ros2 launch sme-4wcl-navigation navigation.launch.py map:=/path/to/your/map.yaml
+```
 
 ## Assets - Robot Meshes
 To update the robot model when it is modified in the cloud (Onshape)
