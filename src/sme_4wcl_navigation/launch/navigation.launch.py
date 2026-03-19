@@ -16,7 +16,6 @@ def generate_launch_description():
     pkg_mob_nav = get_package_share_directory('sme_4wcl_navigation')
     # Files
     nav2_params_file_path = os.path.join(pkg_mob_nav, 'param', 'nav2_params.yaml')
-    rviz_config_path = os.path.join(pkg_mob_nav, 'rviz', 'navigation.rviz')
     nav2_launch_file_dir = os.path.join(get_package_share_directory('nav2_bringup'), 'launch')
 
     map_dir = LaunchConfiguration(
@@ -52,13 +51,6 @@ def generate_launch_description():
             description='Full path to the ROS2 parameters file to use for all launched nodes'
         ),
 
-        # RViz parameters
-        DeclareLaunchArgument(
-            'use_rviz',
-            default_value='true',
-            description='Whether to start RViz'
-        ),
-
         # Node Execution
         ########################################################################
         
@@ -71,14 +63,4 @@ def generate_launch_description():
                 'params_file': nav2_params_dir}.items()
         ),
         
-        # RViz node execution
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d', rviz_config_path],
-            condition=IfCondition(LaunchConfiguration('use_rviz')),
-            parameters=[{'use_sim_time': True}],
-            output='screen'
-        ),
     ])

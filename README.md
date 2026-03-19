@@ -34,10 +34,10 @@ This package contains the robot's URDF description and launch files for visualiz
 #### RViz Visualization
 To visualize the robot in **RViz2** and interactively move its joints:
 ```bash
-# Option 1: Launch the robot in RViz2 with wheel joint states
+# Option 1: Launch the robot in RViz2 with wheel joint states (not use with gazebo)
 ros2 launch sme_4wcl_description display_with_joints.launch.py
 
-# Option 2: Launch the robot in RViz2 only with rviz
+# Option 2: Launch the robot in RViz2 only with rviz (use with gazebo)
 ros2 launch sme_4wcl_description display.launch.py
 
 # Optional with Option 2: Publish the wheel joint states
@@ -75,12 +75,19 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 This package provides navigation capabilities using the **Nav2** stack.
 
 #### Launch Navigation
-1. First, ensure you have the robot simulation running (Gazebo):
+1. Unified Simulation & Navigation (Recommended):
+To launch Gazebo Sim (Ignition), RViz, and the Nav2 stack altogether in a single command:
+```bash
+ros2 launch sme_4wcl_navigation navigation_sim.launch.py
+```
+
+2. Separate Launch (Alternative):
+If you prefer to launch components separately, first ensure you have the robot simulation running (Gazebo):
 ```bash
 ros2 launch sme_4wcl_description gazebo.launch.py
 ```
 
-2. Then, launch the navigation stack:
+Then, launch the navigation stack:
 ```bash
 ros2 launch sme_4wcl_navigation navigation.launch.py
 ```
