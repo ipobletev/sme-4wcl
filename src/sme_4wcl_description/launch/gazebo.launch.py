@@ -74,12 +74,16 @@ def generate_launch_description():
             '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
             '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
             '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
-            '/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
+            '/model/sme_4wcl/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
             '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
+            '/model/sme_4wcl/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
         ],
         parameters=[{'use_sim_time': True}],
+        remappings=[
+            ('/model/sme_4wcl/tf', '/tf'),
+            ('/model/sme_4wcl/joint_states', '/joint_states'),
+        ],
         output='screen'
     )
 
