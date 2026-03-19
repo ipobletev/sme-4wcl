@@ -34,11 +34,15 @@ This package contains the robot's URDF description and launch files for visualiz
 #### RViz Visualization
 To visualize the robot in **RViz2** and interactively move its joints:
 ```bash
-# Launch the robot in RViz2
+# Option 1: Launch the robot in RViz2 with wheel joint states
+ros2 launch sme_4wcl_description display_with_joints.launch.py
+
+# Option 2: Launch the robot in RViz2 only with rviz
 ros2 launch sme_4wcl_description display.launch.py
 
-# Publish the wheel joint states
+# Optional with Option 2: Publish the wheel joint states
 ros2 run joint_state_publisher_gui joint_state_publisher_gui 
+
 ```
 
 #### Gazebo Simulation
