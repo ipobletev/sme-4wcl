@@ -63,17 +63,19 @@ def generate_launch_description():
 
     declare_use_software_rendering_cmd = DeclareLaunchArgument(
         'use_software_rendering',
-        default_value='false',
+        default_value='true',
         description='Whether to force software rendering (LIBGL_ALWAYS_SOFTWARE=1)'
     )
 
     # Gazebo Sim (Ignition) launch
+    world_file = os.path.join(pkg_sme_description, 'world', 'test_world.sdf')
+    
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
         ),
         launch_arguments={'gz_args': [
-            '-r empty.sdf --render-engine ', render_engine
+            '-r ', world_file, ' --render-engine ', render_engine
         ]}.items(),
     )
 
@@ -141,7 +143,7 @@ def generate_launch_description():
     ld.add_action(SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre'))
     ld.add_action(SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre'))
     ld.add_action(SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'))
-    ld.add_action(SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1', condition=IfCondition(use_software_rendering)))
+    ld.add_action(SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1'))
 
     # Add declare arguments
     ld.add_action(declare_map_yaml_cmd)

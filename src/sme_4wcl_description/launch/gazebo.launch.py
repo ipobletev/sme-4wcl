@@ -18,6 +18,9 @@ def generate_launch_description():
     urdf_file = os.path.join(pkg_share, 'urdf', 'sme-4wcl.gazebo.xacro')
     robot_description = Command(['xacro ', urdf_file])
     
+    # Bridge parameters
+    bridge_params = os.path.join(pkg_share, 'param', 'ign_bridge_parameters.yml')
+
     # Declaring arguments for rendering
     render_engine = DeclareLaunchArgument(
         'render_engine',
@@ -69,7 +72,6 @@ def generate_launch_description():
     )
 
     # Bridge between ROS 2 and Gazebo Sim
-    bridge_params = os.path.join(pkg_share, 'param', 'ign_bridge_parameters.yml')
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
