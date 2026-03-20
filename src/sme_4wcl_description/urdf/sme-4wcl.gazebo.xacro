@@ -5,7 +5,7 @@
   <xacro:include filename="$(find sme_4wcl_description)/urdf/robot.urdf" />
 
   <!-- Gazebo physics properties for the wheels -->
-  <gazebo reference="wheel_1">
+  <gazebo reference="wheel_1_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -15,7 +15,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_2">
+  <gazebo reference="wheel_2_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -25,7 +25,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_3">
+  <gazebo reference="wheel_3_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -35,7 +35,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_4">
+  <gazebo reference="wheel_4_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -76,12 +76,12 @@
       <joint_name>base_link_to_wheel_4</joint_name>
     </plugin>
 
-    <!-- Sensors Plugin -->
-    <plugin
-      filename="libignition-gazebo-imu-system.so"
+    <!-- IMU Plugin -->
+    <plugin filename="libignition-gazebo-imu-system.so"
       name="ignition::gazebo::systems::Imu">
     </plugin>
 
+    <!-- Sensors Plugin - Lidar-->
     <plugin
       filename="libignition-gazebo-sensors-system.so"
       name="ignition::gazebo::systems::Sensors">
@@ -90,30 +90,32 @@
 
   </gazebo>
 
-  <gazebo reference="lidar_1">
+  <!-- Lidar -->
+  <gazebo reference="lidar_1_link">
     <sensor name='gpu_lidar' type='gpu_lidar'>
-        <pose relative_to='lidar_1'>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <topic>/scan</topic>
+        <gz_frame_id>lidar_1_link</gz_frame_id>
         <update_rate>10</update_rate>
         <ray>
             <scan>
                 <horizontal>
-                    <samples>640</samples>
-                    <resolution>1</resolution>
-                    <min_angle>-1.396263</min_angle>
-                    <max_angle>1.396263</max_angle>
+                  <samples>640</samples>
+                  <resolution>1</resolution>
+                  <min_angle>0</min_angle>
+                  <max_angle>6.28318</max_angle>
                 </horizontal>
                 <vertical>
-                    <samples>1</samples>
-                    <resolution>0.01</resolution>
-                    <min_angle>0</min_angle>
-                    <max_angle>0</max_angle>
+                  <samples>1</samples>
+                  <resolution>0.01</resolution>
+                  <min_angle>0</min_angle>
+                  <max_angle>0</max_angle>
                 </vertical>
             </scan>
             <range>
-                <min>0.08</min>
-                <max>10.0</max>
-                <resolution>0.01</resolution>
+              <min>0.08</min>
+              <max>10.0</max>
+              <resolution>0.01</resolution>
             </range>
         </ray>
         <always_on>1</always_on>
@@ -121,10 +123,11 @@
     </sensor>
   </gazebo>
 
-  <gazebo reference="jetson_nano">
-    <sensor name="jetson_nano" type="imu">
-      <gz_frame_id>jetson_nano</gz_frame_id>
-      <frame_id>jetson_nano</frame_id>
+  <!-- IMU -->
+  <gazebo reference="jetson_nano_link">
+    <sensor name="jetson_nano_imu" type="imu">
+      <gz_frame_id>jetson_nano_link</gz_frame_id>
+      <frame_id>jetson_nano_link</frame_id>
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <visualize>true</visualize>

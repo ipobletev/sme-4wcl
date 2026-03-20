@@ -21,24 +21,26 @@ def generate_launch_description():
     # Declaring arguments for rendering
     render_engine = DeclareLaunchArgument(
         'render_engine',
-        default_value='ogre',
+        default_value='ogre2',
         description='Render engine for Gazebo (ogre or ogre2)'
     )
 
     use_software_rendering = LaunchConfiguration('use_software_rendering')
     declare_use_software_rendering = DeclareLaunchArgument(
         'use_software_rendering',
-        default_value='false',
+        default_value='true',
         description='Whether to force software rendering (LIBGL_ALWAYS_SOFTWARE=1)'
     )
 
     # Gazebo Sim (Ignition) launch
+    world_file = os.path.join(pkg_share, 'world', 'test_world.sdf')
+    
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
         ),
         launch_arguments={'gz_args': [
-            '-r empty.sdf --render-engine ', LaunchConfiguration('render_engine')
+            '-r ', world_file, ' --render-engine ', LaunchConfiguration('render_engine')
         ]}.items(),
     )
 
@@ -92,15 +94,11 @@ def generate_launch_description():
     return LaunchDescription([
         declare_use_software_rendering,
         
-        # Software rendering toggle
-        SetEnvironmentVariable(
-            'LIBGL_ALWAYS_SOFTWARE', '1',
-            condition=IfCondition(use_software_rendering)
-        ),
-        # MESA_GL_VERSION_OVERRIDE removed as it might cause hanging
+        # Software rendering - required for ogre2 on VMware SVGA
+        SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1'),
         
-        SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre'),
-        SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre'),
+        SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre2'),
+        SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre2'),
         SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'),
         
         SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', [

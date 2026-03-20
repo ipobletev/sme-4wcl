@@ -5,7 +5,7 @@
   <xacro:include filename="$(find sme_4wcl_description)/urdf/robot.urdf" />
 
   <!-- Gazebo physics properties for the wheels -->
-  <gazebo reference="wheel_1">
+  <gazebo reference="wheel_1_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -15,7 +15,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_2">
+  <gazebo reference="wheel_2_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -25,7 +25,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_3">
+  <gazebo reference="wheel_3_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -35,7 +35,7 @@
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
-  <gazebo reference="wheel_4">
+  <gazebo reference="wheel_4_link">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
     <kp>1000000.0</kp>
@@ -96,7 +96,7 @@
     </plugin>
   </gazebo>
 
-  <gazebo reference="lidar_1">
+  <gazebo reference="lidar_1_link">
     <sensor name="lidar" type="ray">
       <always_on>true</always_on>
       <visualize>true</visualize>
@@ -131,7 +131,7 @@
     </sensor>
   </gazebo>
 
-  <gazebo reference="jetson_nano">
+  <gazebo reference="jetson_nano_link">
     <sensor name="jetson_nano" type="imu">
       <always_on>true</always_on>
       <update_rate>100</update_rate>

@@ -61,18 +61,18 @@ echo -e "${BLUE}Environment installed successfully.${NC}"
 
 echo "Launch onshape-to-robot..."
 
-if [ -d "sme-4wcl" ]; then
-    onshape-to-robot sme-4wcl
+if [ -d "sme_4wcl" ]; then
+    onshape-to-robot sme_4wcl
     echo -e "${BLUE}Syncing generated files to package directories...${NC}"
     mkdir -p ../urdf
     mkdir -p ../meshes
-    cp sme-4wcl/robot.urdf ../urdf/
+    cp sme_4wcl/robot.urdf ../urdf/
     # Replace package://assets/ with package://sme_4wcl_description/meshes/ in the URDF
     sed -i 's|package://assets/|package://sme_4wcl_description/meshes/|g' ../urdf/robot.urdf
-    cp sme-4wcl/assets/*.stl ../meshes/
+    cp sme_4wcl/assets/*.stl ../meshes/
     echo -e "${GREEN}Sync completed.${NC}"
 else
-    echo -e "${YELLOW}Please create 'sme-4wcl' directory and add your robot configuration files to it.${NC}"
+    echo -e "${YELLOW}Please create 'sme_4wcl' directory and add your robot configuration files to it.${NC}"
 fi
 
 echo -e "${GREEN}Process completed successfully.${NC}"

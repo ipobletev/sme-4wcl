@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/17dd0bfb7268aff2770d6a72/w/a1b7f6d82147a790c6751a93/e/7e9b766432fb5da199998094 -->
-<robot name="sme-4wcl">
+<robot name="sme_4wcl">
   <!-- Link base_footprint -->
   <link name="base_footprint">
     <inertial>
@@ -290,8 +290,8 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link base_top -->
-  <link name="base_top">
+  <!-- Link base_top_link -->
+  <link name="base_top_link">
     <inertial>
       <origin xyz="2.12102e-07 1.29432e-07 -0.0015" rpy="0 0 0"/>
       <mass value="0.803036"/>
@@ -314,8 +314,8 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link lidar_1 -->
-  <link name="lidar_1">
+  <!-- Link lidar_1_link -->
+  <link name="lidar_1_link">
     <inertial>
       <origin xyz="8.21805e-05 -4.08005e-05 0.0116504" rpy="0 0 0"/>
       <mass value="0.0138375"/>
@@ -450,16 +450,16 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_top to lidar_1 -->
+  <!-- Joint from base_top_link to lidar_1_link -->
   <joint name="base_top_to_lidar_1" type="fixed">
     <origin xyz="0.091 0 0.072" rpy="3.14159 0 -1.5708"/>
-    <parent link="base_top"/>
-    <child link="lidar_1"/>
+    <parent link="base_top_link"/>
+    <child link="lidar_1_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link camera_1 -->
-  <link name="camera_1">
+  <!-- Link camera_1_link -->
+  <link name="camera_1_link">
     <inertial>
       <origin xyz="0.000225802 0.0130641 -0.0293086" rpy="0 0 0"/>
       <mass value="0.237529"/>
@@ -514,24 +514,24 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_top to camera_1 -->
+  <!-- Joint from base_top_link to camera_1_link -->
   <joint name="base_top_to_camera_1" type="fixed">
     <origin xyz="0.08 0 -0" rpy="3.14159 -0 1.5708"/>
-    <parent link="base_top"/>
-    <child link="camera_1"/>
+    <parent link="base_top_link"/>
+    <child link="camera_1_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Joint from base_link to base_top -->
+  <!-- Joint from base_link to base_top_link -->
   <joint name="base_link_to_base_top" type="fixed">
     <origin xyz="1.01319e-07 1.80614e-07 -0.053" rpy="3.14159 -0 0"/>
     <parent link="base_link"/>
-    <child link="base_top"/>
+    <child link="base_top_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link jetson_nano -->
-  <link name="jetson_nano">
+  <!-- Link jetson_nano_link -->
+  <link name="jetson_nano_link">
     <inertial>
       <origin xyz="-0.00129439 -0.00247621 -0.0121146" rpy="0 0 0"/>
       <mass value="0.557665"/>
@@ -554,16 +554,16 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to jetson_nano -->
+  <!-- Joint from base_link to jetson_nano_link -->
   <joint name="base_link_to_jetson_nano" type="fixed">
     <origin xyz="-0.0438485 -0.0209999 -0.003" rpy="0 -0 0"/>
     <parent link="base_link"/>
-    <child link="jetson_nano"/>
+    <child link="jetson_nano_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link wheel_1 -->
-  <link name="wheel_1">
+  <!-- Link wheel_1_link -->
+  <link name="wheel_1_link">
     <inertial>
       <origin xyz="7.56968e-06 -7.26734e-06 0.00823709" rpy="0 0 0"/>
       <mass value="0.614542"/>
@@ -762,16 +762,16 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to wheel_1 -->
+  <!-- Joint from base_link to wheel_1_link -->
   <joint name="base_link_to_wheel_1" type="continuous">
     <origin xyz="0.0750542 -0.106021 0.0175757" rpy="1.5708 -1.5708 0"/>
     <parent link="base_link"/>
-    <child link="wheel_1"/>
+    <child link="wheel_1_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link wheel_4 -->
-  <link name="wheel_4">
+  <!-- Link wheel_4_link -->
+  <link name="wheel_4_link">
     <inertial>
       <origin xyz="7.56968e-06 7.26734e-06 -0.00823709" rpy="0 0 0"/>
       <mass value="0.614542"/>
@@ -970,16 +970,16 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to wheel_4 -->
+  <!-- Joint from base_link to wheel_4_link -->
   <joint name="base_link_to_wheel_4" type="continuous">
     <origin xyz="-0.090054 0.106022 0.0175757" rpy="1.5708 0 0"/>
     <parent link="base_link"/>
-    <child link="wheel_4"/>
+    <child link="wheel_4_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link wheel_2 -->
-  <link name="wheel_2">
+  <!-- Link wheel_2_link -->
+  <link name="wheel_2_link">
     <inertial>
       <origin xyz="7.56968e-06 7.26734e-06 -0.00823709" rpy="0 0 0"/>
       <mass value="0.614542"/>
@@ -1178,16 +1178,16 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to wheel_2 -->
+  <!-- Joint from base_link to wheel_2_link -->
   <joint name="base_link_to_wheel_2" type="continuous">
     <origin xyz="0.074946 0.106022 0.0175757" rpy="1.5708 0 0"/>
     <parent link="base_link"/>
-    <child link="wheel_2"/>
+    <child link="wheel_2_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
-  <!-- Link wheel_3 -->
-  <link name="wheel_3">
+  <!-- Link wheel_3_link -->
+  <link name="wheel_3_link">
     <inertial>
       <origin xyz="7.56968e-06 -7.26734e-06 0.00823709" rpy="0 0 0"/>
       <mass value="0.614542"/>
@@ -1386,11 +1386,11 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to wheel_3 -->
+  <!-- Joint from base_link to wheel_3_link -->
   <joint name="base_link_to_wheel_3" type="continuous">
     <origin xyz="-0.0899458 -0.106021 0.0175757" rpy="1.5708 -1.5708 0"/>
     <parent link="base_link"/>
-    <child link="wheel_3"/>
+    <child link="wheel_3_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
