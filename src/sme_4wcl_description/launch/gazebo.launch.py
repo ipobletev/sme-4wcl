@@ -21,10 +21,10 @@ def generate_launch_description():
     # Declaring arguments for rendering
     render_engine = DeclareLaunchArgument(
         'render_engine',
-        default_value='ogre2',
+        default_value='ogre',
         description='Render engine for Gazebo (ogre or ogre2)'
     )
-
+    
     use_software_rendering = LaunchConfiguration('use_software_rendering')
     declare_use_software_rendering = DeclareLaunchArgument(
         'use_software_rendering',
@@ -97,8 +97,8 @@ def generate_launch_description():
         # Software rendering - required for ogre2 on VMware SVGA
         SetEnvironmentVariable('LIBGL_ALWAYS_SOFTWARE', '1'),
         
-        SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre2'),
-        SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre2'),
+        SetEnvironmentVariable('IGN_GAZEBO_RENDER_ENGINE_GUESS', 'ogre'),
+        SetEnvironmentVariable('GZ_RENDERING_ENGINE_GUESS', 'ogre'),
         SetEnvironmentVariable('QT_X11_NO_MITSHM', '1'),
         
         SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', [
