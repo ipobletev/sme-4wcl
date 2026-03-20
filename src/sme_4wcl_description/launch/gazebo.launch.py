@@ -69,23 +69,14 @@ def generate_launch_description():
     )
 
     # Bridge between ROS 2 and Gazebo Sim
+    bridge_params = os.path.join(pkg_share, 'param', 'ign_bridge_parameters.yml')
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        arguments=[
-            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
-            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
-            '/model/sme_4wcl/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
-            '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
-            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/model/sme_4wcl/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
-        ],
-        parameters=[{'use_sim_time': True}],
-        remappings=[
-            ('/model/sme_4wcl/tf', '/tf'),
-            ('/model/sme_4wcl/joint_states', '/joint_states'),
-        ],
+        parameters=[{
+            'config_file': bridge_params,
+            'use_sim_time': True
+        }],
         output='screen'
     )
 
