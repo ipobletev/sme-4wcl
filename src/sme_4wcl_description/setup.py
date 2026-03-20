@@ -17,6 +17,7 @@ setup(
         (os.path.join('share', package_name, 'urdf'), glob('urdf/*')),
         (os.path.join('share', package_name, 'meshes'), glob('meshes/*.stl')),
         (os.path.join('share', package_name, 'world'), glob('world/*.sdf')),
+        (os.path.join('share', package_name, 'param'), glob('param/*.yaml') + glob('param/*.yml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

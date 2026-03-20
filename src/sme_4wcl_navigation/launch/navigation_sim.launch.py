@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
@@ -79,16 +79,21 @@ def generate_launch_description():
         ]}.items(),
     )
 
-    # Spawn the robot
-    spawn = Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
-            '-name', 'sme-4wcl',
-            '-topic', 'robot_description',
-            '-z', '0.1',
-        ],
-        output='screen',
+    # Spawn the robot (delayed to give robot_state_publisher time to start)
+    spawn = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='ros_gz_sim',
+                executable='create',
+                arguments=[
+                    '-name', 'sme-4wcl',
+                    '-topic', 'robot_description',
+                    '-z', '0.1',
+                ],
+                output='screen',
+            )
+        ]
     )
 
     # Robot State Publisher
@@ -154,11 +159,20 @@ def generate_launch_description():
     ld.add_action(declare_use_software_rendering_cmd)
 
     # Add nodes and included launch files
-    ld.add_action(gazebo)
-    ld.add_action(spawn)
-    ld.add_action(robot_state_publisher)
-    ld.add_action(bridge)
-    ld.add_action(nav2_bringup)
-    ld.add_action(rviz)
+    ld.add_action(gazebo)                  # 1. Start Gazebo first
+    ld.add_action(bridge)                  # 2. Start bridge immediately (provides /clock)
+    ld.add_action(TimerAction(             # 3. Start RSP after 2s (clock must be available)
+        period=2.0,
+        actions=[robot_state_publisher]
+    ))
+    ld.add_action(spawn)                   # 4. Spawn robot after 5s (RSP + Gazebo must be ready)
+    ld.add_action(TimerAction(             # 5. Start Nav2 after 10s (bridge + Gazebo must supply /clock first)
+        period=10.0,
+        actions=[nav2_bringup]
+    ))
+    ld.add_action(TimerAction(             # 6. Start RViz after 8s
+        period=8.0,
+        actions=[rviz]
+    ))
 
     return ld
