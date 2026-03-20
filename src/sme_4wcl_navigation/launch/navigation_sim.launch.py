@@ -20,6 +20,7 @@ def generate_launch_description():
     rviz_config_path = os.path.join(pkg_sme_navigation, 'rviz', 'navigation.rviz')
     map_yaml_file = os.path.join(pkg_sme_navigation, 'map', 'map.yaml')
     urdf_file = os.path.join(pkg_sme_description, 'urdf', 'sme-4wcl.gazebo.xacro')
+    bridge_params_file = os.path.join(pkg_sme_description, 'param', 'ign_bridge_parameters.yml')
 
     # Simulation Time & Rendering
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -104,20 +105,10 @@ def generate_launch_description():
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        arguments=[
-            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
-            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
-            '/model/sme_4wcl/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
-            '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
-            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/model/sme_4wcl/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
-        ],
-        parameters=[{'use_sim_time': True}],
-        remappings=[
-            ('/model/sme_4wcl/tf', '/tf'),
-            ('/model/sme_4wcl/joint_states', '/joint_states'),
-        ],
+        parameters=[{
+            'config_file': bridge_params_file,
+            'use_sim_time': True
+        }],
         output='screen'
     )
 
