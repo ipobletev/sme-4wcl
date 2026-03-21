@@ -1,32 +1,31 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command, LaunchConfiguration
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch.conditions import IfCondition
-from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     # Packages
     pkg_sme_navigation = get_package_share_directory('sme_4wcl_navigation')
     pkg_sme_description = get_package_share_directory('sme_4wcl_description')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-    pkg_nav2_bringup = get_package_share_directory('nav2_bringup')
 
     # Files
     nav2_params_file_path = os.path.join(pkg_sme_navigation, 'param', 'nav2_params.yaml')
     rviz_config_path = os.path.join(pkg_sme_navigation, 'rviz', 'navigation.rviz')
     map_yaml_file = os.path.join(pkg_sme_navigation, 'map', 'map.yaml')
     urdf_file = os.path.join(pkg_sme_description, 'urdf', 'sme-4wcl_classic.gazebo.xacro')
+    navigation_launch_file = os.path.join(pkg_sme_navigation, 'launch', 'navigation.launch.py')
 
-    # Simulation Time
+    # Launch Configurations
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     use_software_rendering = LaunchConfiguration('use_software_rendering', default='false')
-
-    # Robot Description
-    robot_description = Command(['xacro ', urdf_file])
+    
+    map_yaml = LaunchConfiguration('map')
+    params_file = LaunchConfiguration('params_file')
 
     # Declare Launch Arguments
     declare_map_yaml_cmd = DeclareLaunchArgument(
@@ -55,7 +54,7 @@ def generate_launch_description():
 
     declare_use_software_rendering_cmd = DeclareLaunchArgument(
         'use_software_rendering',
-        default_value='false',
+        default_value='true',
         description='Whether to force software rendering (LIBGL_ALWAYS_SOFTWARE=1)'
     )
 
@@ -83,27 +82,15 @@ def generate_launch_description():
         output='screen',
     )
 
-    # Robot State Publisher
-    robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        name='robot_state_publisher',
-        output='screen',
-        parameters=[{
-            'robot_description': ParameterValue(robot_description, value_type=str),
-            'use_sim_time': True
-        }]
-    )
-
-    # Note: No bridge needed for Gazebo Classic as plugins publish directly to ROS topics.
-
-    # Navigation Nav2 node execution
-    nav2_bringup = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(pkg_nav2_bringup, 'launch', 'bringup_launch.py')),
+    # Navigation (RSP, EKF, Nav2) node execution
+    navigation = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(navigation_launch_file),
         launch_arguments={
-            'map': LaunchConfiguration('map'),
             'use_sim_time': use_sim_time,
-            'params_file': LaunchConfiguration('params_file')}.items()
+            'map': map_yaml,
+            'params_file': params_file,
+            'urdf_file': urdf_file
+        }.items()
     )
 
     # RViz node execution
@@ -113,7 +100,7 @@ def generate_launch_description():
         name='rviz2',
         arguments=['-d', rviz_config_path],
         condition=IfCondition(LaunchConfiguration('use_rviz')),
-        parameters=[{'use_sim_time': True}],
+        parameters=[{'use_sim_time': use_sim_time}],
         output='screen'
     )
 
@@ -136,9 +123,22 @@ def generate_launch_description():
 
     # Add nodes and included launch files
     ld.add_action(gazebo)
-    ld.add_action(spawn)
-    ld.add_action(robot_state_publisher)
-    ld.add_action(nav2_bringup)
-    ld.add_action(rviz)
+    
+    # We delay navigation by 2s so /robot_description is ready before spawn
+    ld.add_action(TimerAction(             
+        period=2.0,
+        actions=[navigation]
+    ))
+    
+    # We delay spawn to 3s because it waits for /robot_description from navigation.launch.py
+    ld.add_action(TimerAction(
+        period=3.0,
+        actions=[spawn]
+    ))
+    
+    ld.add_action(TimerAction(             
+        period=8.0,
+        actions=[rviz]
+    ))
 
     return ld

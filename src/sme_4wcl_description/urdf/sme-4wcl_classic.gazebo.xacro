@@ -76,7 +76,7 @@
 
       <!-- output -->
       <publish_odom>true</publish_odom>
-      <publish_odom_tf>true</publish_odom_tf>
+      <publish_odom_tf>false</publish_odom_tf>
       <publish_wheel_tf>true</publish_wheel_tf>
 
       <odometry_frame>odom</odometry_frame>
@@ -126,7 +126,7 @@
           <remapping>~/out:=scan</remapping>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
-        <frame_name>lidar_1</frame_name>
+        <frame_name>lidar_1_link</frame_name>
       </plugin>
     </sensor>
   </gazebo>
@@ -140,6 +140,7 @@
         <ros>
           <remapping>~/out:=imu</remapping>
         </ros>
+        <frame_name>jetson_nano_link</frame_name>
       </plugin>
     </sensor>
   </gazebo>
