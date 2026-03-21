@@ -159,7 +159,7 @@ def generate_launch_description():
     ld.add_action(spawn)                   # 3. Spawn robot after 3s
     
     ld.add_action(TimerAction(             # 4. Start RViz after 8s
-        period=8.0,
+        period=5.0,
         actions=[rviz]
     ))
 
