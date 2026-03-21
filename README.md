@@ -92,6 +92,25 @@ Then, launch the navigation stack:
 ros2 launch sme_4wcl_navigation navigation.launch.py
 ```
 
+#### Launch SLAM (Mapping)
+1. Unified Simulation & SLAM (Recommended):
+To generate a new map of the environment using `slam_toolbox`, you can run the SLAM simulation wrapper:
+```bash
+ros2 launch sme_4wcl_navigation slam_sim.launch.py
+```
+
+Move the robot around using the `teleop_twist_keyboard` to build the map, and once finished, save it using:
+```bash
+ros2 run nav2_map_server map_saver_cli -f my_map
+```
+
+2. Autonomous Navigation + SLAM:
+To run both SLAM and autonomous navigation (Nav2 stack) together:
+```bash
+ros2 launch sme_4wcl_navigation navigation_slam_sim.launch.py
+```
+*(Alternative separate launch: `ros2 launch sme_4wcl_navigation navigation_slam.launch.py`)*
+
 #### Arguments
 - `map`: (Optional) Path to the map YAML file. Default is `map/map.yaml` within the package.
 - `use_sim_time`: (Optional) Use simulation time. Default is `true`.
