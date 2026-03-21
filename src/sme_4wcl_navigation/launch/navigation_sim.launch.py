@@ -21,6 +21,8 @@ def generate_launch_description():
     map_yaml_file = os.path.join(pkg_sme_navigation, 'map', 'map.yaml')
     urdf_file = os.path.join(pkg_sme_description, 'urdf', 'sme-4wcl.gazebo.xacro')
     bridge_params_file = os.path.join(pkg_sme_description, 'param', 'ign_bridge_parameters.yml')
+    ekf_params_file = os.path.join(pkg_sme_description, 'param', 'ekf.yaml')
+
 
     # Simulation Time & Rendering
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -108,6 +110,15 @@ def generate_launch_description():
         }]
     )
 
+    # Robot Localization
+    robot_localization = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[ekf_params_file, {'use_sim_time': True}]
+    )
+
     # Bridge between ROS 2 and Gazebo Sim
     bridge = Node(
         package='ros_gz_bridge',
@@ -164,6 +175,10 @@ def generate_launch_description():
     ld.add_action(TimerAction(             # 3. Start RSP after 2s (clock must be available)
         period=2.0,
         actions=[robot_state_publisher]
+    ))
+    ld.add_action(TimerAction(             # 3.5 Start EKF after 3s
+        period=3.0,
+        actions=[robot_localization]
     ))
     ld.add_action(spawn)                   # 4. Spawn robot after 5s (RSP + Gazebo must be ready)
     ld.add_action(TimerAction(             # 5. Start Nav2 after 10s (bridge + Gazebo must supply /clock first)

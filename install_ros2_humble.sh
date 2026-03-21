@@ -60,3 +60,4 @@ sudo apt install -y ros-humble-rviz2
 sudo apt install -y ros-humble-robot-state-publisher
 sudo apt install -y ros-humble-navigation2 
 sudo apt install -y ros-humble-nav2-bringup
+sudo apt install -y ros-humble-robot-localization
