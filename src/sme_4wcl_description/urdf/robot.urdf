@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/17dd0bfb7268aff2770d6a72/w/a1b7f6d82147a790c6751a93/e/7e9b766432fb5da199998094 -->
-<robot name="sme_4wcl">
+<robot name="C:\GIT\sme\ROS\sme-4wcl\src\sme_4wcl_description\on-shape-export-urdf\sme_4wcl">
   <!-- Link base_footprint -->
   <link name="base_footprint">
     <inertial>
@@ -21,7 +21,7 @@
     <visual>
       <origin xyz="-0.318 0.0680002 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
       <material name="hex_spacer_ff_m3_l50mm_v1_material">
         <color rgba="0.196078 0.196078 0.196078 1"/>
@@ -30,14 +30,14 @@
     <collision>
       <origin xyz="-0.318 0.0680002 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part base_plate_v2 -->
     <visual>
       <origin xyz="0.00115151 9.8738e-08 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/base_plate_v2.stl"/>
+        <mesh filename="package://assets\base_plate_v2.stl"/>
       </geometry>
       <material name="base_plate_v2_material">
         <color rgba="0.141176 0.141176 0.141176 1"/>
@@ -46,14 +46,14 @@
     <collision>
       <origin xyz="0.00115151 9.8738e-08 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/base_plate_v2.stl"/>
+        <mesh filename="package://assets\base_plate_v2.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_spacer_ff_m3_l50mm_v1_2 -->
     <visual>
       <origin xyz="-0.0884999 -0.0439998 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
       <material name="hex_spacer_ff_m3_l50mm_v1_2_material">
         <color rgba="0.196078 0.196078 0.196078 1"/>
@@ -62,14 +62,14 @@
     <collision>
       <origin xyz="-0.0884999 -0.0439998 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_spacer_ff_m3_l50mm_v1_3 -->
     <visual>
       <origin xyz="-0.318 -0.0679998 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
       <material name="hex_spacer_ff_m3_l50mm_v1_3_material">
         <color rgba="0.196078 0.196078 0.196078 1"/>
@@ -78,14 +78,14 @@
     <collision>
       <origin xyz="-0.318 -0.0679998 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part hex_spacer_ff_m3_l50mm_v1_4 -->
     <visual>
       <origin xyz="-0.0884999 0.0440002 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
       <material name="hex_spacer_ff_m3_l50mm_v1_4_material">
         <color rgba="0.196078 0.196078 0.196078 1"/>
@@ -94,14 +94,14 @@
     <collision>
       <origin xyz="-0.0884999 0.0440002 -0.053" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hex_spacer_ff_m3_l50mm_v1.stl"/>
+        <mesh filename="package://assets\hex_spacer_ff_m3_l50mm_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part hexagonalmotoradapter_v1 -->
     <visual>
       <origin xyz="-0.0899458 -0.0945214 0.0175757" rpy="-3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
       <material name="hexagonalmotoradapter_v1_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -110,14 +110,14 @@
     <collision>
       <origin xyz="-0.0899458 -0.0945214 0.0175757" rpy="-3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_l_v4 -->
     <visual>
       <origin xyz="-0.0899999 -0.0729998 0.025" rpy="-1.5708 0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
       <material name="motor_bracket_l_v4_material">
         <color rgba="0.101961 0.101961 0.101961 1"/>
@@ -126,14 +126,14 @@
     <collision>
       <origin xyz="-0.0899999 -0.0729998 0.025" rpy="-1.5708 0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_12v_v2 -->
     <visual>
       <origin xyz="-0.0901041 -0.0456716 0.0260675" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
       <material name="dcmotor_12v_v2_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -142,14 +142,14 @@
     <collision>
       <origin xyz="-0.0901041 -0.0456716 0.0260675" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
     </collision>
     <!-- Part hexagonalmotoradapter_v1_2 -->
     <visual>
       <origin xyz="-0.090054 0.0945217 0.0175757" rpy="0 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
       <material name="hexagonalmotoradapter_v1_2_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -158,14 +158,14 @@
     <collision>
       <origin xyz="-0.090054 0.0945217 0.0175757" rpy="0 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_12v_v2_2 -->
     <visual>
       <origin xyz="-0.0898957 0.0456719 0.0260675" rpy="-1.5708 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
       <material name="dcmotor_12v_v2_2_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -174,14 +174,14 @@
     <collision>
       <origin xyz="-0.0898957 0.0456719 0.0260675" rpy="-1.5708 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_l_v4_2 -->
     <visual>
       <origin xyz="-0.0899999 0.0730002 0.025" rpy="-1.5708 0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
       <material name="motor_bracket_l_v4_2_material">
         <color rgba="0.101961 0.101961 0.101961 1"/>
@@ -190,14 +190,14 @@
     <collision>
       <origin xyz="-0.0899999 0.0730002 0.025" rpy="-1.5708 0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_l_v4_3 -->
     <visual>
       <origin xyz="0.0750001 -0.0729998 0.025" rpy="-1.5708 0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
       <material name="motor_bracket_l_v4_3_material">
         <color rgba="0.101961 0.101961 0.101961 1"/>
@@ -206,14 +206,14 @@
     <collision>
       <origin xyz="0.0750001 -0.0729998 0.025" rpy="-1.5708 0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_12v_v2_3 -->
     <visual>
       <origin xyz="0.0748959 -0.0456716 0.0260675" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
       <material name="dcmotor_12v_v2_3_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -222,14 +222,14 @@
     <collision>
       <origin xyz="0.0748959 -0.0456716 0.0260675" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
     </collision>
     <!-- Part hexagonalmotoradapter_v1_3 -->
     <visual>
       <origin xyz="0.0750542 -0.0945214 0.0175757" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
       <material name="hexagonalmotoradapter_v1_3_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -238,14 +238,14 @@
     <collision>
       <origin xyz="0.0750542 -0.0945214 0.0175757" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_l_v4_4 -->
     <visual>
       <origin xyz="0.0750001 0.0730002 0.025" rpy="-1.5708 0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
       <material name="motor_bracket_l_v4_4_material">
         <color rgba="0.101961 0.101961 0.101961 1"/>
@@ -254,14 +254,14 @@
     <collision>
       <origin xyz="0.0750001 0.0730002 0.025" rpy="-1.5708 0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/motor_bracket_l_v4.stl"/>
+        <mesh filename="package://assets\motor_bracket_l_v4.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_12v_v2_4 -->
     <visual>
       <origin xyz="0.0751043 0.0456719 0.0260675" rpy="-1.5708 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
       <material name="dcmotor_12v_v2_4_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -270,14 +270,14 @@
     <collision>
       <origin xyz="0.0751043 0.0456719 0.0260675" rpy="-1.5708 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/dcmotor_12v_v2.stl"/>
+        <mesh filename="package://assets\dcmotor_12v_v2.stl"/>
       </geometry>
     </collision>
     <!-- Part hexagonalmotoradapter_v1_4 -->
     <visual>
       <origin xyz="0.074946 0.0945217 0.0175757" rpy="0 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
       <material name="hexagonalmotoradapter_v1_4_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -286,7 +286,7 @@
     <collision>
       <origin xyz="0.074946 0.0945217 0.0175757" rpy="0 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/hexagonalmotoradapter_v1.stl"/>
+        <mesh filename="package://assets\hexagonalmotoradapter_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -301,7 +301,7 @@
     <visual>
       <origin xyz="0.00115151 9.8738e-08 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/base_plate_top_v2.stl"/>
+        <mesh filename="package://assets\base_plate_top_v2.stl"/>
       </geometry>
       <material name="base_plate_top_v2_material">
         <color rgba="0.141176 0.141176 0.141176 1"/>
@@ -310,7 +310,7 @@
     <collision>
       <origin xyz="0.00115151 9.8738e-08 0" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/base_plate_top_v2.stl"/>
+        <mesh filename="package://assets\base_plate_top_v2.stl"/>
       </geometry>
     </collision>
   </link>
@@ -325,7 +325,7 @@
     <visual>
       <origin xyz="0.0141626 -0.0139635 0.0025658" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_4.stl"/>
+        <mesh filename="package://assets\pa2x6_4.stl"/>
       </geometry>
       <material name="pa2x6_4_material">
         <color rgba="0.117647 0.105882 0.211765 1"/>
@@ -334,14 +334,14 @@
     <collision>
       <origin xyz="0.0141626 -0.0139635 0.0025658" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_4.stl"/>
+        <mesh filename="package://assets\pa2x6_4.stl"/>
       </geometry>
     </collision>
     <!-- Part pa2x6_3 -->
     <visual>
       <origin xyz="-0.014 0.014 0.00269365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_3.stl"/>
+        <mesh filename="package://assets\pa2x6_3.stl"/>
       </geometry>
       <material name="pa2x6_3_material">
         <color rgba="0.117647 0.105882 0.211765 1"/>
@@ -350,14 +350,14 @@
     <collision>
       <origin xyz="-0.014 0.014 0.00269365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_3.stl"/>
+        <mesh filename="package://assets\pa2x6_3.stl"/>
       </geometry>
     </collision>
     <!-- Part ld19_up -->
     <visual>
       <origin xyz="0 0 0.000193654" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_up.stl"/>
+        <mesh filename="package://assets\ld19_up.stl"/>
       </geometry>
       <material name="ld19_up_material">
         <color rgba="0.498039 0.498039 0.498039 1"/>
@@ -366,14 +366,14 @@
     <collision>
       <origin xyz="0 0 0.000193654" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_up.stl"/>
+        <mesh filename="package://assets\ld19_up.stl"/>
       </geometry>
     </collision>
     <!-- Part ld19_bottom -->
     <visual>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_bottom.stl"/>
+        <mesh filename="package://assets\ld19_bottom.stl"/>
       </geometry>
       <material name="ld19_bottom_material">
         <color rgba="0.552941 0.552941 0.552941 1"/>
@@ -382,14 +382,14 @@
     <collision>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_bottom.stl"/>
+        <mesh filename="package://assets\ld19_bottom.stl"/>
       </geometry>
     </collision>
     <!-- Part pa2x6_1 -->
     <visual>
       <origin xyz="0.014 0.014 0.00769365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_1.stl"/>
+        <mesh filename="package://assets\pa2x6_1.stl"/>
       </geometry>
       <material name="pa2x6_1_material">
         <color rgba="0.117647 0.105882 0.211765 1"/>
@@ -398,14 +398,14 @@
     <collision>
       <origin xyz="0.014 0.014 0.00769365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_1.stl"/>
+        <mesh filename="package://assets\pa2x6_1.stl"/>
       </geometry>
     </collision>
     <!-- Part ld19_pcb -->
     <visual>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_pcb.stl"/>
+        <mesh filename="package://assets\ld19_pcb.stl"/>
       </geometry>
       <material name="ld19_pcb_material">
         <color rgba="0.235294 0.8 0.172549 1"/>
@@ -414,14 +414,14 @@
     <collision>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_pcb.stl"/>
+        <mesh filename="package://assets\ld19_pcb.stl"/>
       </geometry>
     </collision>
     <!-- Part pa2x6_2 -->
     <visual>
       <origin xyz="-0.014 -0.014 0.00769365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_2.stl"/>
+        <mesh filename="package://assets\pa2x6_2.stl"/>
       </geometry>
       <material name="pa2x6_2_material">
         <color rgba="0.117647 0.105882 0.211765 1"/>
@@ -430,14 +430,14 @@
     <collision>
       <origin xyz="-0.014 -0.014 0.00769365" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/pa2x6_2.stl"/>
+        <mesh filename="package://assets\pa2x6_2.stl"/>
       </geometry>
     </collision>
     <!-- Part ld19_middle -->
     <visual>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_middle.stl"/>
+        <mesh filename="package://assets\ld19_middle.stl"/>
       </geometry>
       <material name="ld19_middle_material">
         <color rgba="0.552941 0.552941 0.552941 1"/>
@@ -446,7 +446,7 @@
     <collision>
       <origin xyz="0 0 0.0121937" rpy="3.14159 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/ld19_middle.stl"/>
+        <mesh filename="package://assets\ld19_middle.stl"/>
       </geometry>
     </collision>
   </link>
@@ -469,7 +469,7 @@
     <visual>
       <origin xyz="0.00025 -0.00417224 -0.0339699" rpy="-0.022408 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra.stl"/>
+        <mesh filename="package://assets\astra.stl"/>
       </geometry>
       <material name="astra_material">
         <color rgba="0.74902 0.74902 0.74902 1"/>
@@ -478,14 +478,14 @@
     <collision>
       <origin xyz="0.00025 -0.00417224 -0.0339699" rpy="-0.022408 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra.stl"/>
+        <mesh filename="package://assets\astra.stl"/>
       </geometry>
     </collision>
     <!-- Part astra_clip2 -->
     <visual>
       <origin xyz="-0 -0.000432857 -0.014" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra_clip2.stl"/>
+        <mesh filename="package://assets\astra_clip2.stl"/>
       </geometry>
       <material name="astra_clip2_material">
         <color rgba="0.74902 0.74902 0.74902 1"/>
@@ -494,14 +494,14 @@
     <collision>
       <origin xyz="-0 -0.000432857 -0.014" rpy="1.5708 -0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra_clip2.stl"/>
+        <mesh filename="package://assets\astra_clip2.stl"/>
       </geometry>
     </collision>
     <!-- Part astra_clip1 -->
     <visual>
       <origin xyz="0.00025 0.00156719 -0.000652516" rpy="-1.57078 0 -3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra_clip1.stl"/>
+        <mesh filename="package://assets\astra_clip1.stl"/>
       </geometry>
       <material name="astra_clip1_material">
         <color rgba="0.74902 0.74902 0.74902 1"/>
@@ -510,7 +510,7 @@
     <collision>
       <origin xyz="0.00025 0.00156719 -0.000652516" rpy="-1.57078 0 -3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/astra_clip1.stl"/>
+        <mesh filename="package://assets\astra_clip1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -541,7 +541,7 @@
     <visual>
       <origin xyz="-0.00367111 0.00745596 0.0086" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/jetson_nano_v1.stl"/>
+        <mesh filename="package://assets\jetson_nano_v1.stl"/>
       </geometry>
       <material name="jetson_nano_v1_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -550,7 +550,7 @@
     <collision>
       <origin xyz="-0.00367111 0.00745596 0.0086" rpy="3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/jetson_nano_v1.stl"/>
+        <mesh filename="package://assets\jetson_nano_v1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -565,622 +565,414 @@
   <!-- Link wheel_1_link -->
   <link name="wheel_1_link">
     <inertial>
-      <origin xyz="7.56968e-06 -7.26734e-06 0.00823709" rpy="0 0 0"/>
-      <mass value="0.614542"/>
-      <inertia ixx="0.000237399" ixy="-2.3521e-08" ixz="1.32633e-07" iyy="0.00023691" iyz="1.47008e-07" izz="0.000273526"/>
+      <origin xyz="2.0763e-08 0 0.0189797" rpy="0 0 0"/>
+      <mass value="0.228965"/>
+      <inertia ixx="8.54505e-05" ixy="-0" ixz="3.6e-11" iyy="8.54505e-05" iyz="-5.4e-11" izz="0.00011491"/>
     </inertial>
-    <!-- Part part2 -->
+    <!-- Part roller -->
     <visual>
-      <origin xyz="-0 0 0.026" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0104764 0.028863 0.0189135" rpy="2.66623 -0.785398 -2.79253"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part2_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0 0 0.026" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0104764 0.028863 0.0189135" rpy="2.66623 -0.785398 -2.79253"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4 -->
+    <!-- Part roller_2 -->
     <visual>
-      <origin xyz="-0.032376 0.0106802 -0.00658304" rpy="-2.07059 -0.785398 -1.4399"/>
+      <origin xyz="-0.0265782 0.0153762 0.0189135" rpy="1.95839 -0.785398 -2.0944"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_2_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.032376 0.0106802 -0.00658304" rpy="-2.07059 -0.785398 -1.4399"/>
+      <origin xyz="-0.0265782 0.0153762 0.0189135" rpy="1.95839 -0.785398 -2.0944"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_2 -->
+    <!-- Part roller_3 -->
     <visual>
-      <origin xyz="0.00677035 -0.0335077 -0.00679517" rpy="-0.559917 -0.785398 0.654498"/>
+      <origin xyz="-0.0302437 -0.00530528 0.0189135" rpy="1.44675 -0.785398 -1.39626"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_2_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_3_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00677035 -0.0335077 -0.00679517" rpy="-0.559917 -0.785398 0.654498"/>
+      <origin xyz="-0.0302437 -0.00530528 0.0189135" rpy="1.44675 -0.785398 -1.39626"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_3 -->
+    <!-- Part roller_4 -->
     <visual>
-      <origin xyz="0.0267707 -0.0211094 -0.00658304" rpy="2.07059 -0.785398 1.35263"/>
+      <origin xyz="0.0302343 -0.00535863 0.0189135" rpy="-1.44675 -0.785398 1.39626"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_3_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_4_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0267707 -0.0211094 -0.00658304" rpy="2.07059 -0.785398 1.35263"/>
+      <origin xyz="0.0302343 -0.00535863 0.0189135" rpy="-1.44675 -0.785398 1.39626"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1 -->
+    <!-- Part frame -->
     <visual>
-      <origin xyz="0 -0 -0.0125365" rpy="0 0 2.39983"/>
+      <origin xyz="0 0 0.035" rpy="-3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\frame.stl"/>
       </geometry>
-      <material name="part1_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="frame_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -0 -0.0125365" rpy="0 0 2.39983"/>
+      <origin xyz="0 0 0.035" rpy="-3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\frame.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1_2 -->
+    <!-- Part roller_5 -->
     <visual>
-      <origin xyz="-0 -0 0.029" rpy="3.14159 -0 -0.0436332"/>
+      <origin xyz="-0.0197579 -0.0235044 0.0189135" rpy="0.870557 -0.785398 -0.698132"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part1_2_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_5_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0 -0 0.029" rpy="3.14159 -0 -0.0436332"/>
+      <origin xyz="-0.0197579 -0.0235044 0.0189135" rpy="0.870557 -0.785398 -0.698132"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_4 -->
+    <!-- Part core -->
     <visual>
-      <origin xyz="-0.0309354 -0.0132994 -0.00559127" rpy="-2.63779 -0.785398 -0.741765"/>
+      <origin xyz="0 0 0.003" rpy="-3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core.stl"/>
       </geometry>
-      <material name="part4_4_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="core_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0309354 -0.0132994 -0.00559127" rpy="-2.63779 -0.785398 -0.741765"/>
+      <origin xyz="0 0 0.003" rpy="-3.14159 -0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_5 -->
+    <!-- Part frame_2 -->
     <visual>
-      <origin xyz="0.0254374 0.0226983 -0.00658304" rpy="0.484751 -0.785398 2.74889"/>
+      <origin xyz="0 0 0.003" rpy="0 0 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame.stl"/>
       </geometry>
-      <material name="part4_5_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="frame_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0254374 0.0226983 -0.00658304" rpy="0.484751 -0.785398 2.74889"/>
+      <origin xyz="0 0 0.003" rpy="0 0 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_6 -->
+    <!-- Part roller_6 -->
     <visual>
-      <origin xyz="-0.0179363 0.0289925 -0.00658304" rpy="-1.36944 -0.785398 -2.13803"/>
+      <origin xyz="0.0197164 -0.0235392 0.0189135" rpy="-0.870557 -0.785398 0.698132"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_6_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_6_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0179363 0.0289925 -0.00658304" rpy="-1.36944 -0.785398 -2.13803"/>
+      <origin xyz="0.0197164 -0.0235392 0.0189135" rpy="-0.870557 -0.785398 0.698132"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_7 -->
+    <!-- Part roller_7 -->
     <visual>
-      <origin xyz="-0.01614 -0.0300296 -0.00658304" rpy="-1.09684 -0.785398 -0.0436332"/>
+      <origin xyz="-2.70868e-05 -0.0307055 0.0189135" rpy="-0 -0.785398 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_7_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_7_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.01614 -0.0300296 -0.00658304" rpy="-1.09684 -0.785398 -0.0436332"/>
+      <origin xyz="-2.70868e-05 -0.0307055 0.0189135" rpy="-0 -0.785398 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_8 -->
+    <!-- Part roller_8 -->
     <visual>
-      <origin xyz="0.0340764 0.0010371 -0.00658304" rpy="-2.9102 -0.785398 2.05076"/>
+      <origin xyz="0.0266053 0.0153293 0.0189135" rpy="-1.95839 -0.785398 2.0944"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_8_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_8_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0340764 0.0010371 -0.00658304" rpy="-2.9102 -0.785398 2.05076"/>
+      <origin xyz="0.0266053 0.0153293 0.0189135" rpy="-1.95839 -0.785398 2.0944"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_9 -->
+    <!-- Part roller_9 -->
     <visual>
-      <origin xyz="0.00509827 0.0338026 -0.00679517" rpy="-0.48876 -0.785398 -2.83616"/>
+      <origin xyz="0.0105274 0.0288445 0.0189135" rpy="-2.66623 -0.785398 2.79253"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
-      <material name="part4_9_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_9_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00509827 0.0338026 -0.00679517" rpy="-0.48876 -0.785398 -2.83616"/>
+      <origin xyz="0.0105274 0.0288445 0.0189135" rpy="-2.66623 -0.785398 2.79253"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller.stl"/>
       </geometry>
     </collision>
   </link>
   <!-- Joint from base_link to wheel_1_link -->
   <joint name="base_link_to_wheel_1" type="continuous">
-    <origin xyz="0.0750542 -0.106021 0.0175757" rpy="1.5708 -1.5708 0"/>
+    <origin xyz="0.0750542 -0.101021 0.0175757" rpy="1.5708 -1.5708 0"/>
     <parent link="base_link"/>
     <child link="wheel_1_link"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10"/>
-  </joint>
-  <!-- Link wheel_4_link -->
-  <link name="wheel_4_link">
-    <inertial>
-      <origin xyz="7.56968e-06 7.26734e-06 -0.00823709" rpy="0 0 0"/>
-      <mass value="0.614542"/>
-      <inertia ixx="0.000237399" ixy="2.3521e-08" ixz="-1.32633e-07" iyy="0.00023691" iyz="1.47008e-07" izz="0.000273526"/>
-    </inertial>
-    <!-- Part part4_10 -->
-    <visual>
-      <origin xyz="-0.01614 0.0300296 0.00658304" rpy="2.04475 0.785398 0.0436332"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_10_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.01614 0.0300296 0.00658304" rpy="2.04475 0.785398 0.0436332"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_11 -->
-    <visual>
-      <origin xyz="0.00677035 0.0335077 0.00679517" rpy="2.58168 0.785398 -0.654498"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_11_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.00677035 0.0335077 0.00679517" rpy="2.58168 0.785398 -0.654498"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_12 -->
-    <visual>
-      <origin xyz="0.00509827 -0.0338026 0.00679517" rpy="2.65283 0.785398 2.83616"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_12_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.00509827 -0.0338026 0.00679517" rpy="2.65283 0.785398 2.83616"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_13 -->
-    <visual>
-      <origin xyz="-0.032376 -0.0106802 0.00658304" rpy="1.07101 0.785398 1.4399"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_13_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.032376 -0.0106802 0.00658304" rpy="1.07101 0.785398 1.4399"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part1_3 -->
-    <visual>
-      <origin xyz="0 0 0.0125365" rpy="-3.14159 -0 -2.39983"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
-      </geometry>
-      <material name="part1_3_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.0125365" rpy="-3.14159 -0 -2.39983"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_14 -->
-    <visual>
-      <origin xyz="-0.0309354 0.0132994 0.00559127" rpy="0.503798 0.785398 0.741765"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_14_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.0309354 0.0132994 0.00559127" rpy="0.503798 0.785398 0.741765"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_15 -->
-    <visual>
-      <origin xyz="0.0340764 -0.0010371 0.00658304" rpy="0.231397 0.785398 -2.05076"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_15_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.0340764 -0.0010371 0.00658304" rpy="0.231397 0.785398 -2.05076"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_16 -->
-    <visual>
-      <origin xyz="0.0254374 -0.0226983 0.00658304" rpy="-2.65684 0.785398 -2.74889"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_16_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.0254374 -0.0226983 0.00658304" rpy="-2.65684 0.785398 -2.74889"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part2_2 -->
-    <visual>
-      <origin xyz="0 0 -0.026" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
-      </geometry>
-      <material name="part2_2_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 -0.026" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part1_4 -->
-    <visual>
-      <origin xyz="-0 0 -0.029" rpy="-0 -0 0.0436332"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
-      </geometry>
-      <material name="part1_4_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0 0 -0.029" rpy="-0 -0 0.0436332"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_17 -->
-    <visual>
-      <origin xyz="0.0267707 0.0211094 0.00658304" rpy="-1.07101 0.785398 -1.35263"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_17_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.0267707 0.0211094 0.00658304" rpy="-1.07101 0.785398 -1.35263"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part4_18 -->
-    <visual>
-      <origin xyz="-0.0179363 -0.0289925 0.00658304" rpy="1.77215 0.785398 2.13803"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-      <material name="part4_18_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.0179363 -0.0289925 0.00658304" rpy="1.77215 0.785398 2.13803"/>
-      <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to wheel_4_link -->
-  <joint name="base_link_to_wheel_4" type="continuous">
-    <origin xyz="-0.090054 0.106022 0.0175757" rpy="1.5708 0 0"/>
-    <parent link="base_link"/>
-    <child link="wheel_4_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
   <!-- Link wheel_2_link -->
   <link name="wheel_2_link">
     <inertial>
-      <origin xyz="7.56968e-06 7.26734e-06 -0.00823709" rpy="0 0 0"/>
-      <mass value="0.614542"/>
-      <inertia ixx="0.000237399" ixy="2.3521e-08" ixz="-1.32633e-07" iyy="0.00023691" iyz="1.47008e-07" izz="0.000273526"/>
+      <origin xyz="3e-12 -1e-12 -0.018954" rpy="0 0 0"/>
+      <mass value="0.228965"/>
+      <inertia ixx="8.54536e-05" ixy="0" ixz="0" iyy="8.54536e-05" iyz="0" izz="0.000114914"/>
     </inertial>
-    <!-- Part part4_19 -->
+    <!-- Part roller_10 -->
     <visual>
-      <origin xyz="-0.01614 0.0300296 0.00658304" rpy="2.04475 0.785398 0.0436332"/>
+      <origin xyz="0.0302834 0.00508008 -0.0188036" rpy="-0.870557 0.785398 1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_19_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_10_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.01614 0.0300296 0.00658304" rpy="2.04475 0.785398 0.0436332"/>
+      <origin xyz="0.0302834 0.00508008 -0.0188036" rpy="-0.870557 0.785398 1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_20 -->
+    <!-- Part roller_11 -->
     <visual>
-      <origin xyz="0.00509827 -0.0338026 0.00679517" rpy="2.65283 0.785398 2.83616"/>
+      <origin xyz="0.019933 0.0233574 -0.0188036" rpy="-0.870557 0.785398 2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_20_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_11_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00509827 -0.0338026 0.00679517" rpy="2.65283 0.785398 2.83616"/>
+      <origin xyz="0.019933 0.0233574 -0.0188036" rpy="-0.870557 0.785398 2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_21 -->
+    <!-- Part roller_12 -->
     <visual>
-      <origin xyz="-0.0179363 -0.0289925 0.00658304" rpy="1.77215 0.785398 2.13803"/>
+      <origin xyz="0.000255756 0.0307055 -0.0188036" rpy="-0.870557 0.785398 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_21_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_12_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0179363 -0.0289925 0.00658304" rpy="1.77215 0.785398 2.13803"/>
+      <origin xyz="0.000255756 0.0307055 -0.0188036" rpy="-0.870557 0.785398 3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1_5 -->
+    <!-- Part roller_13 -->
     <visual>
-      <origin xyz="0 0 0.0125365" rpy="-3.14159 -0 -2.39983"/>
+      <origin xyz="0.0102616 -0.0289412 -0.0188036" rpy="-0.870557 0.785398 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part1_5_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_13_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.0125365" rpy="-3.14159 -0 -2.39983"/>
+      <origin xyz="0.0102616 -0.0289412 -0.0188036" rpy="-0.870557 0.785398 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_22 -->
+    <!-- Part core_2 -->
     <visual>
-      <origin xyz="0.0340764 -0.0010371 0.00658304" rpy="0.231397 0.785398 -2.05076"/>
+      <origin xyz="0 0 -0.003" rpy="-0 0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core__2.stl"/>
       </geometry>
-      <material name="part4_22_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="core_2_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0340764 -0.0010371 0.00658304" rpy="0.231397 0.785398 -2.05076"/>
+      <origin xyz="0 0 -0.003" rpy="-0 0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_23 -->
+    <!-- Part frame_3 -->
     <visual>
-      <origin xyz="-0.0309354 0.0132994 0.00559127" rpy="0.503798 0.785398 0.741765"/>
+      <origin xyz="0 0 -0.003" rpy="-0 0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
-      <material name="part4_23_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="frame_3_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0309354 0.0132994 0.00559127" rpy="0.503798 0.785398 0.741765"/>
+      <origin xyz="0 0 -0.003" rpy="-0 0 -0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_24 -->
+    <!-- Part roller_14 -->
     <visual>
-      <origin xyz="0.00677035 0.0335077 0.00679517" rpy="2.58168 0.785398 -0.654498"/>
+      <origin xyz="-0.0195412 0.0236862 -0.0188036" rpy="-0.870557 0.785398 -2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_24_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_14_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00677035 0.0335077 0.00679517" rpy="2.58168 0.785398 -0.654498"/>
+      <origin xyz="-0.0195412 0.0236862 -0.0188036" rpy="-0.870557 0.785398 -2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part2_3 -->
+    <!-- Part roller_15 -->
     <visual>
-      <origin xyz="0 -0 -0.026" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0264639 -0.0155742 -0.0188036" rpy="-0.870557 0.785398 1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part2_3_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_15_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -0 -0.026" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0264639 -0.0155742 -0.0188036" rpy="-0.870557 0.785398 1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1_6 -->
+    <!-- Part roller_16 -->
     <visual>
-      <origin xyz="-0 0 -0.029" rpy="-0 -0 0.0436332"/>
+      <origin xyz="-0.0107422 -0.0287663 -0.0188036" rpy="-0.870557 0.785398 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part1_6_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_16_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0 0 -0.029" rpy="-0 -0 0.0436332"/>
+      <origin xyz="-0.0107422 -0.0287663 -0.0188036" rpy="-0.870557 0.785398 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_25 -->
+    <!-- Part roller_17 -->
     <visual>
-      <origin xyz="0.0254374 -0.0226983 0.00658304" rpy="-2.65684 0.785398 -2.74889"/>
+      <origin xyz="-0.0267196 -0.0151313 -0.0188036" rpy="-0.870557 0.785398 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_25_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_17_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0254374 -0.0226983 0.00658304" rpy="-2.65684 0.785398 -2.74889"/>
+      <origin xyz="-0.0267196 -0.0151313 -0.0188036" rpy="-0.870557 0.785398 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_26 -->
+    <!-- Part frame_4 -->
     <visual>
-      <origin xyz="-0.032376 -0.0106802 0.00658304" rpy="1.07101 0.785398 1.4399"/>
+      <origin xyz="0 -0 -0.035" rpy="3.14159 -0 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
-      <material name="part4_26_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="frame_4_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.032376 -0.0106802 0.00658304" rpy="1.07101 0.785398 1.4399"/>
+      <origin xyz="0 -0 -0.035" rpy="3.14159 -0 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_27 -->
+    <!-- Part roller_18 -->
     <visual>
-      <origin xyz="0.0267707 0.0211094 0.00658304" rpy="-1.07101 0.785398 -1.35263"/>
+      <origin xyz="-0.0301946 0.00558382 -0.0188036" rpy="-0.870557 0.785398 -1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_27_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_18_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0267707 0.0211094 0.00658304" rpy="-1.07101 0.785398 -1.35263"/>
+      <origin xyz="-0.0301946 0.00558382 -0.0188036" rpy="-0.870557 0.785398 -1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
   </link>
   <!-- Joint from base_link to wheel_2_link -->
   <joint name="base_link_to_wheel_2" type="continuous">
-    <origin xyz="0.074946 0.106022 0.0175757" rpy="1.5708 0 0"/>
+    <origin xyz="0.074946 0.101022 0.0175757" rpy="1.5708 -1.5708 0"/>
     <parent link="base_link"/>
     <child link="wheel_2_link"/>
     <axis xyz="0 0 1"/>
@@ -1189,208 +981,416 @@
   <!-- Link wheel_3_link -->
   <link name="wheel_3_link">
     <inertial>
-      <origin xyz="7.56968e-06 -7.26734e-06 0.00823709" rpy="0 0 0"/>
-      <mass value="0.614542"/>
-      <inertia ixx="0.000237399" ixy="-2.3521e-08" ixz="1.32633e-07" iyy="0.00023691" iyz="1.47008e-07" izz="0.000273526"/>
+      <origin xyz="3e-12 1e-12 0.018954" rpy="0 0 0"/>
+      <mass value="0.228965"/>
+      <inertia ixx="8.54536e-05" ixy="-0" ixz="-0" iyy="8.54536e-05" iyz="0" izz="0.000114914"/>
     </inertial>
-    <!-- Part part4_28 -->
+    <!-- Part roller_19 -->
     <visual>
-      <origin xyz="0.0340764 0.0010371 -0.00658304" rpy="-2.9102 -0.785398 2.05076"/>
+      <origin xyz="0.0302834 -0.00508008 0.0188036" rpy="2.27104 -0.785398 -1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_28_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_19_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0340764 0.0010371 -0.00658304" rpy="-2.9102 -0.785398 2.05076"/>
+      <origin xyz="0.0302834 -0.00508008 0.0188036" rpy="2.27104 -0.785398 -1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_29 -->
+    <!-- Part roller_20 -->
     <visual>
-      <origin xyz="0.0254374 0.0226983 -0.00658304" rpy="0.484751 -0.785398 2.74889"/>
+      <origin xyz="0.019933 -0.0233574 0.0188036" rpy="2.27104 -0.785398 -2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_29_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_20_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0254374 0.0226983 -0.00658304" rpy="0.484751 -0.785398 2.74889"/>
+      <origin xyz="0.019933 -0.0233574 0.0188036" rpy="2.27104 -0.785398 -2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_30 -->
+    <!-- Part roller_21 -->
     <visual>
-      <origin xyz="0.0267707 -0.0211094 -0.00658304" rpy="2.07059 -0.785398 1.35263"/>
+      <origin xyz="0.000255756 -0.0307055 0.0188036" rpy="2.27104 -0.785398 -3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_30_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_21_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0267707 -0.0211094 -0.00658304" rpy="2.07059 -0.785398 1.35263"/>
+      <origin xyz="0.000255756 -0.0307055 0.0188036" rpy="2.27104 -0.785398 -3.14159"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_31 -->
+    <!-- Part roller_22 -->
     <visual>
-      <origin xyz="-0.0179363 0.0289925 -0.00658304" rpy="-1.36944 -0.785398 -2.13803"/>
+      <origin xyz="0.0102616 0.0289412 0.0188036" rpy="2.27104 -0.785398 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_31_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_22_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0179363 0.0289925 -0.00658304" rpy="-1.36944 -0.785398 -2.13803"/>
+      <origin xyz="0.0102616 0.0289412 0.0188036" rpy="2.27104 -0.785398 -0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_32 -->
+    <!-- Part core_3 -->
     <visual>
-      <origin xyz="0.00509827 0.0338026 -0.00679517" rpy="-0.48876 -0.785398 -2.83616"/>
+      <origin xyz="-0 0 0.003" rpy="3.14159 0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core__2.stl"/>
       </geometry>
-      <material name="part4_32_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="core_3_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00509827 0.0338026 -0.00679517" rpy="-0.48876 -0.785398 -2.83616"/>
+      <origin xyz="-0 0 0.003" rpy="3.14159 0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\core__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1_7 -->
+    <!-- Part frame_5 -->
     <visual>
-      <origin xyz="0 -0 -0.0125365" rpy="0 0 2.39983"/>
+      <origin xyz="-0 0 0.003" rpy="3.14159 0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
-      <material name="part1_7_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="frame_5_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -0 -0.0125365" rpy="0 0 2.39983"/>
+      <origin xyz="-0 0 0.003" rpy="3.14159 0 0"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_33 -->
+    <!-- Part roller_23 -->
     <visual>
-      <origin xyz="-0.0309354 -0.0132994 -0.00559127" rpy="-2.63779 -0.785398 -0.741765"/>
+      <origin xyz="-0.0195412 -0.0236862 0.0188036" rpy="2.27104 -0.785398 2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_33_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_23_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0309354 -0.0132994 -0.00559127" rpy="-2.63779 -0.785398 -0.741765"/>
+      <origin xyz="-0.0195412 -0.0236862 0.0188036" rpy="2.27104 -0.785398 2.44346"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_34 -->
+    <!-- Part roller_24 -->
     <visual>
-      <origin xyz="-0.01614 -0.0300296 -0.00658304" rpy="-1.09684 -0.785398 -0.0436332"/>
+      <origin xyz="0.0264639 0.0155742 0.0188036" rpy="2.27104 -0.785398 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_34_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_24_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.01614 -0.0300296 -0.00658304" rpy="-1.09684 -0.785398 -0.0436332"/>
+      <origin xyz="0.0264639 0.0155742 0.0188036" rpy="2.27104 -0.785398 -1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part2_4 -->
+    <!-- Part roller_25 -->
     <visual>
-      <origin xyz="-0 0 0.026" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0107422 0.0287663 0.0188036" rpy="2.27104 -0.785398 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part2_4_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_25_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0 0 0.026" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0107422 0.0287663 0.0188036" rpy="2.27104 -0.785398 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part2.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part1_8 -->
+    <!-- Part roller_26 -->
     <visual>
-      <origin xyz="-0 -0 0.029" rpy="3.14159 0 -0.0436332"/>
+      <origin xyz="-0.0267196 0.0151313 0.0188036" rpy="2.27104 -0.785398 1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part1_8_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="roller_26_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0 -0 0.029" rpy="3.14159 0 -0.0436332"/>
+      <origin xyz="-0.0267196 0.0151313 0.0188036" rpy="2.27104 -0.785398 1.0472"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part1.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_35 -->
+    <!-- Part frame_6 -->
     <visual>
-      <origin xyz="-0.032376 0.0106802 -0.00658304" rpy="-2.07059 -0.785398 -1.4399"/>
+      <origin xyz="-0 0 0.035" rpy="-0 0 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
-      <material name="part4_35_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="frame_6_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.032376 0.0106802 -0.00658304" rpy="-2.07059 -0.785398 -1.4399"/>
+      <origin xyz="-0 0 0.035" rpy="-0 0 0.349066"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\frame__2.stl"/>
       </geometry>
     </collision>
-    <!-- Part part4_36 -->
+    <!-- Part roller_27 -->
     <visual>
-      <origin xyz="0.00677035 -0.0335077 -0.00679517" rpy="-0.559917 -0.785398 0.654498"/>
+      <origin xyz="-0.0301946 -0.00558382 0.0188036" rpy="2.27104 -0.785398 1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
-      <material name="part4_36_material">
-        <color rgba="0.25098 0.25098 0.25098 1"/>
+      <material name="roller_27_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00677035 -0.0335077 -0.00679517" rpy="-0.559917 -0.785398 0.654498"/>
+      <origin xyz="-0.0301946 -0.00558382 0.0188036" rpy="2.27104 -0.785398 1.74533"/>
       <geometry>
-        <mesh filename="package://sme_4wcl_description/meshes/part4.stl"/>
+        <mesh filename="package://assets\roller__2.stl"/>
       </geometry>
     </collision>
   </link>
   <!-- Joint from base_link to wheel_3_link -->
   <joint name="base_link_to_wheel_3" type="continuous">
-    <origin xyz="-0.0899458 -0.106021 0.0175757" rpy="1.5708 -1.5708 0"/>
+    <origin xyz="-0.0899458 -0.101021 0.0175757" rpy="1.5708 1.5708 0"/>
     <parent link="base_link"/>
     <child link="wheel_3_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link wheel_4_link -->
+  <link name="wheel_4_link">
+    <inertial>
+      <origin xyz="2.0763e-08 -0 -0.0189797" rpy="0 0 0"/>
+      <mass value="0.228965"/>
+      <inertia ixx="8.54505e-05" ixy="0" ixz="-3.6e-11" iyy="8.54505e-05" iyz="-5.4e-11" izz="0.00011491"/>
+    </inertial>
+    <!-- Part roller_28 -->
+    <visual>
+      <origin xyz="-0.0104764 -0.028863 -0.0189135" rpy="-0.475363 0.785398 2.79253"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_28_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0104764 -0.028863 -0.0189135" rpy="-0.475363 0.785398 2.79253"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_29 -->
+    <visual>
+      <origin xyz="-0.0265782 -0.0153762 -0.0189135" rpy="-1.1832 0.785398 2.0944"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_29_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0265782 -0.0153762 -0.0189135" rpy="-1.1832 0.785398 2.0944"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_30 -->
+    <visual>
+      <origin xyz="-0.0302437 0.00530528 -0.0189135" rpy="-1.69484 0.785398 1.39626"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_30_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0302437 0.00530528 -0.0189135" rpy="-1.69484 0.785398 1.39626"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_31 -->
+    <visual>
+      <origin xyz="0.0302343 0.00535863 -0.0189135" rpy="1.69484 0.785398 -1.39626"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_31_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0302343 0.00535863 -0.0189135" rpy="1.69484 0.785398 -1.39626"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part frame_7 -->
+    <visual>
+      <origin xyz="0 0 -0.035" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\frame.stl"/>
+      </geometry>
+      <material name="frame_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.035" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\frame.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_32 -->
+    <visual>
+      <origin xyz="-0.0197579 0.0235044 -0.0189135" rpy="-2.27104 0.785398 0.698132"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_32_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197579 0.0235044 -0.0189135" rpy="-2.27104 0.785398 0.698132"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part core_4 -->
+    <visual>
+      <origin xyz="0 0 -0.003" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\core.stl"/>
+      </geometry>
+      <material name="core_4_material">
+        <color rgba="0.960784 0.960784 0.964706 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.003" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\core.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part frame_8 -->
+    <visual>
+      <origin xyz="0 0 -0.003" rpy="-3.14159 -0 1.0472"/>
+      <geometry>
+        <mesh filename="package://assets\frame.stl"/>
+      </geometry>
+      <material name="frame_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.003" rpy="-3.14159 -0 1.0472"/>
+      <geometry>
+        <mesh filename="package://assets\frame.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_33 -->
+    <visual>
+      <origin xyz="0.0197164 0.0235392 -0.0189135" rpy="2.27104 0.785398 -0.698132"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_33_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0197164 0.0235392 -0.0189135" rpy="2.27104 0.785398 -0.698132"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_34 -->
+    <visual>
+      <origin xyz="-2.70868e-05 0.0307055 -0.0189135" rpy="3.14159 0.785398 -0"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_34_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.70868e-05 0.0307055 -0.0189135" rpy="3.14159 0.785398 -0"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_35 -->
+    <visual>
+      <origin xyz="0.0266053 -0.0153293 -0.0189135" rpy="1.1832 0.785398 -2.0944"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_35_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0266053 -0.0153293 -0.0189135" rpy="1.1832 0.785398 -2.0944"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part roller_36 -->
+    <visual>
+      <origin xyz="0.0105274 -0.0288445 -0.0189135" rpy="0.475363 0.785398 -2.79253"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+      <material name="roller_36_material">
+        <color rgba="0.172549 0.172549 0.172549 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0105274 -0.0288445 -0.0189135" rpy="0.475363 0.785398 -2.79253"/>
+      <geometry>
+        <mesh filename="package://assets\roller.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base_link to wheel_4_link -->
+  <joint name="base_link_to_wheel_4" type="continuous">
+    <origin xyz="-0.090054 0.101022 0.0175757" rpy="1.5708 -1.5708 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_4_link"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
