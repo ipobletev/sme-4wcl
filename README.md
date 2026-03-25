@@ -125,6 +125,6 @@ ros2 launch sme_4wcl_navigation navigation.launch.py map:=/path/to/your/map.yaml
 To update the robot model when it is modified in the cloud (Onshape)
 
 ```bash
-# Launch the Onshape API to export the URDF and update meshes (./assets) and urdf (./urdf)
+# Launch in linux. Launch the Onshape API to export the URDF and update meshes (./assets) and urdf (./urdf). 
 ./src/sme_4wcl_description/on-shape-export-urdf/launch_app.sh
 ```
